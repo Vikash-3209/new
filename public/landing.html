@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f8faf8">
+    <meta name="description" content="A clearer view of Indian markets. Track stocks, explore historical trends, and keep your watchlist close with Market Pulse.">
+    <title>Market Pulse — See the market differently</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/tailwind.css">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/landing.css">
+  </head>
+  <body class="landing-page">
+    <header class="landing-header">
+      <div class="landing-nav-wrap">
+        <a class="landing-brand" href="/" aria-label="Market Pulse home">
+          <span class="brand-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17.5 8.1 12l3.3 3.1 7.9-8.6M14.5 6.5h4.8v4.8"/></svg></span>
+          <span>market<span>pulse</span></span>
+        </a>
+        <button class="landing-menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="landing-navigation">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+        <nav class="landing-navigation" id="landing-navigation" aria-label="Main navigation">
+          <a href="#features">Features</a>
+          <a href="#how-it-works">How it works</a>
+          <a href="#markets">Markets</a>
+          <a class="landing-nav-cta" href="/dashboard">Open dashboard <span aria-hidden="true">↗</span></a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="landing-hero">
+        <div class="landing-hero-inner">
+          <div class="landing-hero-copy">
+            <div class="landing-kicker"><span class="landing-kicker-mark">✳</span> A FRESH PERSPECTIVE ON INDIAN MARKETS</div>
+            <h1>Make sense of<br>the <span>market.</span></h1>
+            <p class="landing-hero-description">Your stocks, the market pulse, and the bigger picture — all in one clear view. Less noise. More perspective.</p>
+            <div class="landing-hero-actions">
+              <a class="landing-button landing-button-primary" href="/dashboard">Explore your dashboard <span aria-hidden="true">→</span></a>
+              <a class="landing-button landing-button-secondary" href="#features">See what you can do <span aria-hidden="true">↓</span></a>
+            </div>
+            <div class="landing-proof"><span class="proof-avatars" aria-hidden="true"><i>A</i><i>M</i><i>R</i></span><span>A calmer way to follow the markets</span></div>
+          </div>
+
+          <div class="hero-visual" aria-label="Illustrative stock market dashboard preview">
+            <div class="hero-orbit hero-orbit-one"></div>
+            <div class="hero-orbit hero-orbit-two"></div>
+            <div class="floating-note floating-note-top"><span class="floating-note-icon">↗</span><span><strong>Market in focus</strong><small>Big-picture clarity</small></span></div>
+            <div class="preview-window">
+              <div class="preview-topbar"><div class="preview-brand"><span class="preview-brand-icon">↗</span><span>market<span>pulse</span></span></div><span class="preview-live"><i></i> MARKET OVERVIEW</span><span class="preview-avatar">A</span></div>
+              <div class="preview-content">
+                <div class="preview-welcome"><span>YOUR MARKET, IN FOCUS</span><strong>A clearer view of today.</strong></div>
+                <div class="preview-indices">
+                  <div class="preview-index"><span>NIFTY 50</span><strong>24,680.55</strong><small>↗ &nbsp;0.68%</small></div>
+                  <div class="preview-index"><span>SENSEX</span><strong>81,086.21</strong><small>↗ &nbsp;0.54%</small></div>
+                  <div class="preview-index"><span>BANK NIFTY</span><strong>52,842.70</strong><small class="preview-down">↘ &nbsp;0.21%</small></div>
+                </div>
+                <div class="preview-chart-card">
+                  <div class="preview-chart-heading"><span><i></i> MARKET MOMENTUM</span><small>1D&nbsp;&nbsp; 1W&nbsp;&nbsp; <b>1M</b>&nbsp;&nbsp; 1Y</small></div>
+                  <div class="preview-chart">
+                    <div class="preview-chart-labels"><span>25,000</span><span>24,500</span><span>24,000</span></div>
+                    <svg viewBox="0 0 460 130" preserveAspectRatio="none" role="img" aria-label="Illustrative upward-trending market chart">
+                      <defs><linearGradient id="preview-fill" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="#34a879" stop-opacity=".19"/><stop offset="100%" stop-color="#34a879" stop-opacity="0"/></linearGradient></defs>
+                      <path class="preview-gridline" d="M0 20H460M0 64H460M0 108H460"/>
+                      <path class="preview-area" d="M0 100 C18 93 24 104 39 89 S63 96 76 75 S101 84 115 69 S142 78 156 58 S181 77 198 52 S225 64 241 43 S266 55 283 41 S307 54 325 30 S350 45 367 35 S390 46 406 22 S434 31 460 12V130H0Z"/>
+                      <path class="preview-line" d="M0 100 C18 93 24 104 39 89 S63 96 76 75 S101 84 115 69 S142 78 156 58 S181 77 198 52 S225 64 241 43 S266 55 283 41 S307 54 325 30 S350 45 367 35 S390 46 406 22 S434 31 460 12"/>
+                      <circle class="preview-line-dot" cx="460" cy="12" r="4"/>
+                    </svg>
+                    <div class="preview-chart-dates"><span>OCT 01</span><span>OCT 08</span><span>OCT 15</span><span>OCT 24</span></div>
+                  </div>
+                </div>
+                <div class="preview-watchlist"><span>YOUR WATCHLIST</span><div><i class="watch-dot dot-reliance">R</i><b>Reliance Industries</b><strong>₹1,428.65</strong><small>+1.30%</small></div><div><i class="watch-dot dot-tcs">T</i><b>Tata Consultancy</b><strong>₹3,864.20</strong><small class="preview-down">−0.48%</small></div></div>
+              </div>
+              <div class="preview-disclaimer">Illustrative preview · Sample figures, not live quotes</div>
+            </div>
+            <div class="floating-note floating-note-bottom"><span class="floating-note-spark">✳</span><span><strong>Clarity over clutter</strong><small>Your watchlist, at a glance</small></span></div>
+          </div>
+        </div>
+        <div class="hero-bottom-rule"><span>BUILT FOR A BETTER MARKET ROUTINE</span><span>INDIA · NSE &amp; BSE</span></div>
+      </section>
+
+      <section class="landing-ticker" id="markets" aria-label="Indian market indices">
+        <div class="landing-ticker-inner">
+          <span class="ticker-label"><i></i> MARKET SNAPSHOT</span>
+          <span><b>NIFTY 50</b><strong>24,680.55</strong><small>+0.68%</small></span>
+          <span><b>SENSEX</b><strong>81,086.21</strong><small>+0.54%</small></span>
+          <span><b>BANK NIFTY</b><strong>52,842.70</strong><small class="ticker-down">−0.21%</small></span>
+          <span class="ticker-as-of">Illustrative figures</span>
+        </div>
+      </section>
+
+      <section class="landing-section landing-features" id="features">
+        <div class="landing-section-heading"><div><span class="section-kicker">A LITTLE MORE CLARITY</span><h2>Everything you need.<br><span>Nothing you don’t.</span></h2></div><p>Built to make following the market feel less like work and more like understanding.</p></div>
+        <div class="feature-grid">
+          <article class="feature-card feature-card-large"><div class="feature-icon feature-icon-green"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17.5 8.1 12l3.3 3.1 7.9-8.6M14.5 6.5h4.8v4.8"/></svg></div><span class="feature-number">01 / THE BIG PICTURE</span><h3>Know where the market stands.</h3><p>Get a clean read on NIFTY 50, SENSEX, and BANK NIFTY — without digging through the noise.</p><div class="mini-index-preview"><span>NIFTY 50</span><strong>24,680.55</strong><small>↗ &nbsp;0.68% today</small><svg viewBox="0 0 180 50" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40 18 35 31 39 48 27 65 32 79 20 96 26 110 14 127 22 143 9 159 17 180 4"/></svg></div></article>
+          <article class="feature-card"><div class="feature-icon feature-icon-peach"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L3 9.6l6.2-.9L12 3Z"/></svg></div><span class="feature-number">02 / YOUR WATCHLIST</span><h3>Keep your favourites close.</h3><p>Build your own list, follow the names you care about, and see the essentials at a glance.</p><div class="feature-tags"><span>RELIANCE</span><span>TCS</span><span>INFY</span><span>+ your picks</span></div></article>
+          <article class="feature-card"><div class="feature-icon feature-icon-lilac"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V5m0 14h16M8 15l3-4 3 2 5-7"/></svg></div><span class="feature-number">03 / HISTORICAL CONTEXT</span><h3>See the story over time.</h3><p>Explore past price movement, moving averages, and selected-period returns in one place.</p><div class="feature-range"><span>1D</span><span>1W</span><span>1M</span><span>3M</span><span>1Y</span><span>5Y</span></div></article>
+        </div>
+      </section>
+
+      <section class="landing-how" id="how-it-works">
+        <div class="landing-how-inner"><div class="how-copy"><span class="section-kicker">A SIMPLE WAY TO START</span><h2>Markets move fast.<br><span>Your view can stay clear.</span></h2><p>Bring the numbers together, add your own perspective, and make a routine that works for you.</p><a class="landing-button landing-button-primary" href="/dashboard">Take a look inside <span aria-hidden="true">→</span></a></div><div class="how-steps"><article><span>01</span><div><h3>Start with the overview</h3><p>See the major Indian indices together in one calm, readable snapshot.</p></div></article><article><span>02</span><div><h3>Make it your own</h3><p>Add stocks to a personal watchlist and focus on the companies you follow.</p></div></article><article><span>03</span><div><h3>Look beyond today</h3><p>Explore historical price ranges and simple trend indicators for more context.</p></div></article><div class="how-note"><span>✳</span> For research and learning, not a crystal ball.</div></div></div>
+      </section>
+
+      <section class="landing-cta"><div class="cta-pattern" aria-hidden="true"></div><div class="cta-content"><span class="section-kicker">YOUR NEXT MARKET CHECK, SIMPLIFIED</span><h2>Find your focus.<br><span>Then follow the market.</span></h2><p>See your watchlist and market overview in one thoughtful dashboard.</p><a class="landing-button landing-button-light" href="/dashboard">Open Market Pulse <span aria-hidden="true">→</span></a></div><span class="cta-orbit cta-orbit-one"></span><span class="cta-orbit cta-orbit-two"></span></section>
+    </main>
+
+    <footer class="landing-footer"><a class="landing-brand" href="/" aria-label="Market Pulse home"><span class="brand-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17.5 8.1 12l3.3 3.1 7.9-8.6M14.5 6.5h4.8v4.8"/></svg></span><span>market<span>pulse</span></span></a><span>Market data may be delayed. Not investment advice.</span><span>© <span id="landing-year"></span> Market Pulse</span></footer>
+    <script src="/landing.js" defer></script>
+  </body>
+</html>

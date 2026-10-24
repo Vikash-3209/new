@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f7f8fa">
+    <meta name="description" content="A clear, modern view of Indian markets, your watchlist, and stock analytics.">
+    <title>Market Pulse — Your market, in focus</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/tailwind.css">
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body class="antialiased">
+    <div class="app-shell min-h-screen">
+      <aside class="sidebar" id="sidebar">
+        <a class="brand" href="#" aria-label="Market Pulse home">
+          <span class="brand-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17.5 8.1 12l3.3 3.1 7.9-8.6M14.5 6.5h4.8v4.8"/></svg></span>
+          <span>market<span class="brand-light">pulse</span></span>
+        </a>
+        <div class="sidebar-label">WORKSPACE</div>
+        <nav class="nav-list" aria-label="Main navigation">
+          <a class="nav-link active" href="#overview"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="3.5" width="7" height="4" rx="1.5"/><rect x="13.5" y="10.5" width="7" height="10" rx="1.5"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.5"/></svg><span>Overview</span></a>
+          <a class="nav-link" href="#watchlist"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L3 9.6l6.2-.9L12 3Z"/></svg><span>Watchlist</span><span class="nav-count" id="watch-count">06</span></a>
+          <a class="nav-link" href="#analytics"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V5m0 14h16M8 15l3-4 3 2 5-7"/></svg><span>Analytics</span></a>
+        </nav>
+        <div class="sidebar-bottom">
+          <div class="sidebar-tip">
+            <span class="tip-spark">✳</span>
+            <p class="tip-title">Invest with clarity</p>
+            <p class="tip-copy">Make informed decisions with the market in focus.</p>
+          </div>
+          <button class="profile-button" type="button" aria-label="Profile">
+            <span class="avatar">A</span><span class="profile-text"><strong>Alex Morgan</strong><small>Personal account</small></span>
+            <svg class="profile-more" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/></svg>
+          </button>
+        </div>
+      </aside>
+
+      <main class="main-content" id="overview">
+        <header class="topbar">
+          <button class="icon-button menu-button" id="menu-button" aria-label="Open navigation"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+          <div class="breadcrumb"><span>Workspace</span><span class="breadcrumb-slash">/</span><strong>Overview</strong></div>
+          <div class="topbar-actions">
+            <label class="search-box" for="stock-search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.3"/><path d="m16 16 4.3 4.3"/></svg><input id="stock-search" type="search" placeholder="Search stocks..." autocomplete="off"><kbd>⌘ K</kbd><div class="search-results" id="search-results" role="listbox" aria-label="Stock search results"></div></label>
+            <button class="icon-button theme-button" id="theme-toggle" aria-label="Switch to dark mode"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 15.1A8.3 8.3 0 0 1 8.9 3.8 8.5 8.5 0 1 0 20.2 15Z"/></svg></button>
+            <button class="icon-button notification-button" aria-label="Notifications"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9m-8 12h4"/></svg><span></span></button>
+          </div>
+        </header>
+
+        <div class="page-content">
+          <section class="welcome-row">
+            <div><div class="eyebrow"><span class="live-dot"></span><span id="market-status">MARKET OPEN</span><span class="eyebrow-divider">·</span><span id="local-clock">--:-- IST</span></div><h1>Good morning, Alex <span class="wave">✳</span></h1><p class="welcome-copy">Here’s what’s happening in your market today.</p></div>
+            <div class="date-chip"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="16" rx="2"/><path d="M8 3v4m8-4v4M3.5 10h17"/></svg><span id="today-date">Today</span></div>
+          </section>
+
+          <section class="section-block market-section" aria-labelledby="market-heading">
+            <div class="section-heading"><div><h2 id="market-heading">Market overview</h2><p>The pulse of the Indian market</p></div><span class="market-session"><span class="live-dot"></span> Live market</span></div>
+            <div class="market-grid" id="market-grid"></div>
+          </section>
+
+          <div class="dashboard-grid">
+            <section class="panel chart-panel" aria-labelledby="chart-title">
+              <div class="panel-heading chart-heading">
+                <div class="selected-stock-heading"><span class="company-mark" id="selected-mark">R</span><div><div class="title-line"><h2 id="chart-title">Reliance Industries</h2><span class="exchange-tag">NSE</span></div><p id="selected-symbol">RELIANCE · Energy</p></div></div>
+                <button class="watch-toggle active" id="selected-watch-toggle" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L3 9.6l-4.5-4.4 6.2-.9L12 3Z"/></svg><span>In watchlist</span></button>
+              </div>
+              <div class="chart-price-row"><div><strong class="selected-price" id="selected-price">₹1,428.65</strong><span class="price-currency">INR</span><div class="selected-change positive" id="selected-change">+₹18.35 <span>(+1.30%)</span> <small>today</small></div></div><div class="chart-controls"><div class="range-tabs" id="range-tabs" role="tablist" aria-label="Chart range"><button class="range-tab" data-range="1D">1D</button><button class="range-tab" data-range="1W">1W</button><button class="range-tab" data-range="1M">1M</button><button class="range-tab" data-range="3M">3M</button><button class="range-tab active" data-range="1Y">1Y</button><button class="range-tab" data-range="5Y">5Y</button></div><button class="chart-type-button" id="chart-type-toggle" type="button" aria-label="Switch chart style"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5v14m3-10v7m4-12v14m4-8v5m4-10v12"/></svg></button></div></div>
+              <div class="chart-legend"><span><i class="legend-dot"></i>Price</span><span class="chart-source" id="chart-source">SIMULATED DATA</span></div>
+              <div class="chart-wrap"><canvas id="price-chart" aria-label="Interactive stock price chart" role="img"></canvas><div class="chart-tooltip" id="chart-tooltip"></div></div>
+              <div class="chart-footer"><span id="chart-start">—</span><span>Price in INR</span><span id="chart-end">—</span></div>
+              <div class="stock-stats"><div><span>Day high</span><strong id="day-high">₹1,445.20</strong></div><div><span>Day low</span><strong id="day-low">₹1,405.10</strong></div><div><span>Volume</span><strong id="day-volume">8.42M</strong></div><div><span>52W range</span><strong id="year-range">₹1,080 — ₹1,620</strong></div></div>
+            </section>
+
+            <section class="panel watchlist-panel" id="watchlist" aria-labelledby="watchlist-title">
+              <div class="panel-heading"><div><h2 id="watchlist-title">Your watchlist</h2><p>Keep an eye on what matters</p></div><button class="icon-button add-button" id="add-stock-button" type="button" aria-label="Add stock to watchlist"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14m-7-7h14"/></svg></button></div>
+              <div class="watchlist-table-head"><span>COMPANY</span><span>PRICE / CHANGE</span><span></span></div>
+              <div class="watchlist-list" id="watchlist-list"></div>
+              <button class="text-link" id="browse-stocks" type="button">Browse all stocks <span>→</span></button>
+            </section>
+          </div>
+
+          <section class="section-block analytics-section" id="analytics" aria-labelledby="analytics-title">
+            <div class="section-heading"><div><h2 id="analytics-title">Stock insights</h2><p>Historical perspective for <span id="insight-stock-name">Reliance Industries</span></p></div><span class="insight-note">For informational purposes only</span></div>
+            <div class="analytics-grid">
+              <article class="panel metric-card"><div class="metric-label">20-day moving average <span class="metric-icon">↗</span></div><strong id="sma-value">—</strong><div class="metric-foot" id="sma-foot">Based on historical closes</div></article>
+              <article class="panel metric-card"><div class="metric-label">52-week high / low <span class="metric-icon">⌁</span></div><strong class="metric-range" id="high-low-value">—</strong><div class="metric-foot">Last 12 months</div></article>
+              <article class="panel metric-card"><div class="metric-label">Period return <span class="metric-icon">%</span></div><strong id="period-return">—</strong><div class="metric-foot" id="return-foot">Over the selected period</div></article>
+              <article class="panel metric-card trend-card"><div class="metric-label">Trend signal <span class="metric-icon">✳</span></div><strong id="trend-signal">—</strong><div class="metric-foot" id="trend-foot">Based on selected period</div></article>
+            </div>
+            <article class="panel insight-card"><div class="insight-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a7 7 0 0 0-4 12.7c.8.6 1.3 1.3 1.5 2.3h5c.2-1 .7-1.7 1.5-2.3A7 7 0 0 0 12 3Zm-2 18h4m-4-3h4"/></svg></div><div class="insight-body"><div class="insight-title-row"><h3>Analyst's notebook</h3><span class="insight-badge">DATA-DRIVEN</span></div><p id="insight-copy">Select a stock to see a concise summary of its historical trend and price levels.</p><div class="insight-levels"><span><i class="level-dot support"></i>Support <strong id="support-level">—</strong></span><span><i class="level-dot resistance"></i>Resistance <strong id="resistance-level">—</strong></span><span><i class="level-dot risk"></i>Volatility <strong id="risk-level">—</strong></span></div></div></article>
+          </section>
+          <footer class="page-footer"><span>Market Pulse <span id="footer-year"></span></span><span>Market data may be delayed. This is not investment advice.</span></footer>
+        </div>
+      </main>
+    </div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="/app.js" defer></script>
+  </body>
+</html>
